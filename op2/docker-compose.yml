@@ -1,0 +1,15 @@
+version: '3'
+services:
+  oidc-provider:
+    container_name: oidc-server
+    image: qlik/simple-oidc-provider
+    ports:
+      - 4352:4352
+      - 9000:9000
+    environment:
+      - REDIRECTS=http://localhost:33001/auth.php
+      - PORT=9000
+      - IDP_NAME=http://simple-oidc-provider
+      - CONFIG_FILE=/tmp/config/config_file
+    volumes:
+      - ./configs:/tmp/config

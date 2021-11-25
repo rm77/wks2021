@@ -1,0 +1,52 @@
+[
+   {
+        "ClientId": "app0001",
+        "Description": "Aplikasi 1",
+	"ClientSecrets" : [
+	    "app0001secret"
+	],
+        "AllowedGrantTypes": [
+            "Hybrid"
+        ],
+        "AllowAccessTokensViaBrowser": true,
+        "RedirectUris": [
+            "http://localhost:33001/auth.php",
+        ],
+        "PostLogoutRedirectUris": [
+            "http://localhost:33001/",
+        ],
+        "AllowedScopes": [
+            "openid",
+            "profile",
+            "email"
+        ],
+	"ReturnUrl": "http://localhost:33001/",
+        "IdentityTokenLifetime": 3600,
+        "AccessTokenLifetime": 3600
+    },
+    {
+        "ClientId": "app0002",
+	"ClientSecrets" : [
+	    "app0002secret"
+	],
+        "Description": "Aplikasi 2",
+        "AllowedGrantTypes": [
+            "Hybrid"
+        ],
+        "AllowAccessTokensViaBrowser": true,
+        "RedirectUris": [
+            "http://localhost:33002/auth",
+        ],
+        "PostLogoutRedirectUris": [
+            "http://localhost:33002/",
+        ],
+        "AllowedScopes": [
+            "openid",
+            "profile",
+            "email"
+        ],
+	"ReturnUrl": "http://localhost:33002/",
+        "IdentityTokenLifetime": 3600,
+        "AccessTokenLifetime": 3600
+    },
+]

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "jumbojett/openid-connect-php": "^0.9.5",
+        "myits/openid-connect-client": "*"
+    }
+}

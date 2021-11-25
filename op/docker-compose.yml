@@ -1,0 +1,32 @@
+version: '3'
+services:
+  oidc-server:
+      container_name: oidc-server
+      image: ghcr.io/soluto/oidc-server-mock:latest
+      environment:
+        ASPNETCORE_ENVIRONMENT: Development
+        SERVER_OPTIONS_INLINE: |
+          {
+            "AccessTokenJwtType": "JWT",
+            "Discovery": {
+              "ShowKeySet": true
+            },
+            "Authentication": {
+              "CookieSameSiteMode": "Lax",
+              "CheckSessionCookieSameSiteMode": "Lax"
+            }
+          }
+        ACCOUNT_OPTIONS_INLINE: |
+          {
+            "AutomaticRedirectAfterSignOut": true
+          }
+        USERS_CONFIGURATION_PATH: /tmp/config/users.json
+        CLIENTS_CONFIGURATION_PATH: /tmp/config/clients.json
+        ASPNETCORE_URLS: https://+:443;http://+:80
+        ASPNETCORE_Kestrel__Certificates__Default__Password: qwerty678910
+        ASPNETCORE_Kestrel__Certificates__Default__Path: /tmp/config/https.pfx
+      volumes:
+        - ./configs:/tmp/config
+      ports:
+        - 33000:80
+        - 33443:443

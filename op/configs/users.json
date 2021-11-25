@@ -1,0 +1,59 @@
+[
+            {
+              "SubjectId":"0011",
+              "Username":"user1",
+              "Password":"user1password",
+              "Claims": [
+                {
+                  "Type": "name",
+                  "Value": "Chuck Norris"
+                },
+                {
+                  "Type": "email",
+                  "Value": "chuck@gmail.com"
+                },
+                {
+                  "Type": "phone",
+                  "Value": "671237183"
+                }
+              ]
+            },
+            {
+              "SubjectId":"0012",
+              "Username":"user2",
+              "Password":"user2password",
+              "Claims": [
+                {
+                  "Type": "name",
+                  "Value": "Steven Seagal"
+                },
+                {
+                  "Type": "email",
+                  "Value": "stevie@gmail.com"
+                },
+                {
+                  "Type": "phone",
+                  "Value": "612319"
+                }
+              ]
+            },
+            {
+              "SubjectId":"0013",
+              "Username":"user3",
+              "Password":"user3password",
+              "Claims": [
+                {
+                  "Type": "name",
+                  "Value": "Jean Claude V"
+                },
+                {
+                  "Type": "email",
+                  "Value": "jean@gmail.com"
+                },
+                {
+                  "Type": "phone",
+                  "Value": "7232"
+                }
+              ]
+            },
+]

@@ -1,0 +1,11 @@
+[
+  {
+    id: 'user001',
+    email: 'user001@email.com',
+    email_verified: true,
+    name: 'User 001',
+    nickname: 'user 1',
+    password: 'user001password',
+    groups: ['Everyone', 'Sales']
+  }
+]

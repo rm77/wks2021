@@ -1,0 +1,20 @@
+{
+  "idp_name": "http://simple-oidc-provider",
+  "port": 9000,
+  "client_config": [
+    {
+      "client_id": "app1",
+      "client_secret": "app1secret",
+      "redirect_uris": [
+        "http://localhost:33001/auth.php"
+        ]
+    }
+  ],
+  "claim_mapping": {
+    "openid": [ "sub" ],
+    "email": [ "email", "email_verified" ],
+    "profile": [ "name", "nickname" ]
+  }
+}
+
+
